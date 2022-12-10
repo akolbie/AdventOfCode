@@ -45,6 +45,8 @@ def check_best_view(forrest):
             if i == 0 or j == 0 or i == len(forrest) - 1 or j == len(row) - 1:
                 continue
             else:
+                if i == 3:
+                    pass
                 col = [row[j] for row in forrest]
                 vis = find_vis(row, col, j, i)
                 max_vis = max(max_vis, vis)
@@ -56,33 +58,35 @@ def find_vis(row, col, row_index, col_index):
     tree = row[row_index]
 
     for i in row[row_index + 1:]:
+        tally += 1
         if i >= tree:
             break
-        tally += 1
+
 
     total += tally
     tally = 0
 
-    for i in row[:row_index: -1]:
+    for i in row[row_index -1::-1]:
+        tally += 1
         if i >= tree:
             break
-        tally += 1
 
     total *= tally
     tally = 0
 
     for i in col[col_index + 1:]:
+        tally += 1
         if i >= tree:
             break
-        tally += 1
     
     total *= tally
     tally = 0
 
-    for i in col[:col_index: -1]:
+    for i in col[col_index -1::-1]:
+        tally += 1
         if i >= tree:
             break
-        tally += 1
+
     total *= tally
 
     return total
