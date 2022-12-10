@@ -1,6 +1,6 @@
 import csv
 
-LOCATION = "day_1_1_input.csv"
+LOCATION = "day1_input.csv"
 
 # def get_data():
 #     highest = 0
