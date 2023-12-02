@@ -2,8 +2,6 @@ location = 'day2.txt'
 
 MAX = {'blue' : 14, 'red' : 12, 'green' : 13}
 
-data = []
-
 class Game():
     def __init__(self, data):
         if data[-1:] == '\n':
