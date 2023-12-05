@@ -1,6 +1,7 @@
 import csv
 
 file = "day1.csv"
+file = 'day1_bommel.csv'
 
 words = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
 
